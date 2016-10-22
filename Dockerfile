@@ -1,3 +1,3 @@
 FROM golang:onbuild
-ADD . /go/src/greet
+ADD . /go/src/app/greet
 EXPOSE 8080
