@@ -1,3 +1,9 @@
 FROM golang:onbuild
-ADD . /go/src/app/greet
 EXPOSE 8080
+
+WORKDIR /app
+
+# copy binary into image
+COPY hello /app/
+
+ENTRYPOINT ["./hello"]
