@@ -1,6 +1,16 @@
 
 package main
 import "./greet"
-func main(){
-  greet.SayHi("Hung")
+import (
+    "fmt"
+    "net/http"
+)
+
+func handler(w http.ResponseWriter, r *http.Request) {
+    fmt.Fprintf(w, "Hi there, I love %s!", greet.SayHi("Hung Nguyen"))
+}
+
+func main() {
+    http.HandleFunc("/", handler)
+    http.ListenAndServe(":8080", nil)
 }

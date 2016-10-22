@@ -1,0 +1,8 @@
+version: v0.0.1
+containers:
+- name: go_package_example
+  image: cooleo/go_package_example
+  ports:
+  - name: http
+    hostPort: 80
+    containerPort: 8080
