@@ -1,9 +1,9 @@
 
 package main
-import "./greet"
 import (
     "fmt"
     "net/http"
+    greet "./greet"
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
